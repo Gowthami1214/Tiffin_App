@@ -1,0 +1,206 @@
+[
+  {
+    "id": "1",
+    "name": "Amma's South Indian Kitchen",
+    "cuisineType": "South Indian",
+    "pricePerTiffin": 120,
+    "isVeg": true,
+    "rating": 4.8,
+    "weeklyMenu": {
+      "Monday": "Idli Sambar + Coconut Chutney",
+      "Tuesday": "Masala Dosa + Tomato Chutney",
+      "Wednesday": "Uttapam + Sambar",
+      "Thursday": "Pongal + Vada + Sambar",
+      "Friday": "Curd Rice + Pickle + Papad",
+      "Saturday": "Bisi Bele Bath + Raita",
+      "Sunday": "Full Meals — Rice, Dal, Sambar, Rasam, Poriyal, Papad"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Punjabi Dhaba Home",
+    "cuisineType": "Punjabi",
+    "pricePerTiffin": 150,
+    "isVeg": false,
+    "rating": 4.6,
+    "weeklyMenu": {
+      "Monday": "Butter Chicken + Naan + Raita",
+      "Tuesday": "Dal Makhani + Jeera Rice + Salad",
+      "Wednesday": "Palak Paneer + Roti + Dal Fry",
+      "Thursday": "Chicken Curry + Tandoori Roti",
+      "Friday": "Rajma + Rice + Pickle + Papad",
+      "Saturday": "Chole Bhature + Lassi",
+      "Sunday": "Special Kadhai Chicken + Paratha + Raita"
+    }
+  },
+  {
+    "id": "3",
+    "name": "Gujju Ghar Nu Khavanu",
+    "cuisineType": "Gujarati",
+    "pricePerTiffin": 100,
+    "isVeg": true,
+    "rating": 4.7,
+    "weeklyMenu": {
+      "Monday": "Methi Thepla + Curd + Pickle",
+      "Tuesday": "Dal Dhokli + Rice",
+      "Wednesday": "Undhiyu + Puri + Shrikhand",
+      "Thursday": "Khichdi + Kadhi + Papad",
+      "Friday": "Handvo + Green Chutney",
+      "Saturday": "Sev Tameta Nu Shaak + Roti + Dal",
+      "Sunday": "Full Gujarati Thali — Rotli, Dal, Shaak, Rice, Papad, Chass"
+    }
+  },
+  {
+    "id": "4",
+    "name": "Bong Kitchen by Didi",
+    "cuisineType": "Bengali",
+    "pricePerTiffin": 130,
+    "isVeg": false,
+    "rating": 4.5,
+    "weeklyMenu": {
+      "Monday": "Macher Jhol + Steamed Rice",
+      "Tuesday": "Aloo Posto + Dal + Rice",
+      "Wednesday": "Kosha Mangsho + Roti",
+      "Thursday": "Shorshe Ilish + Rice + Daal",
+      "Friday": "Chingri Malaikari + Steamed Rice",
+      "Saturday": "Luchi + Aloor Tarkari + Mishti Doi",
+      "Sunday": "Bengali Full Meal — Rice, Dal, Begun Bhaja, Fish Fry, Chutney"
+    }
+  },
+  {
+    "id": "5",
+    "name": "Maharashtrian Swayampaka",
+    "cuisineType": "Maharashtrian",
+    "pricePerTiffin": 110,
+    "isVeg": true,
+    "rating": 4.4,
+    "weeklyMenu": {
+      "Monday": "Varan Bhaat + Toop + Papad",
+      "Tuesday": "Puran Poli + Katachi Amti",
+      "Wednesday": "Misal Pav + Lemon Water",
+      "Thursday": "Bharli Vangi + Jowar Bhakri",
+      "Friday": "Matki Usal + Rice + Koshimbir",
+      "Saturday": "Thalipeeth + Dahi + Chutney",
+      "Sunday": "Sabudana Khichdi + Shrikhand + Puri"
+    }
+  },
+  {
+    "id": "6",
+    "name": "Kerala Kitchen by Latha",
+    "cuisineType": "Kerala",
+    "pricePerTiffin": 140,
+    "isVeg": false,
+    "rating": 4.9,
+    "weeklyMenu": {
+      "Monday": "Kerala Fish Curry + Steamed Rice + Thoran",
+      "Tuesday": "Appam + Vegetable Stew",
+      "Wednesday": "Puttu + Kadala Curry",
+      "Thursday": "Kappa Biriyani (Tapioca + Fish)",
+      "Friday": "Erissery + Rice + Papad",
+      "Saturday": "Prawn Moilee + Kerala Parotta",
+      "Sunday": "Onam Sadhya — 20+ dishes on banana leaf"
+    }
+  },
+  {
+    "id": "7",
+    "name": "Rajasthani Rasoi",
+    "cuisineType": "Rajasthani",
+    "pricePerTiffin": 115,
+    "isVeg": true,
+    "rating": 4.3,
+    "weeklyMenu": {
+      "Monday": "Dal Baati Churma",
+      "Tuesday": "Gatte ki Sabzi + Bajra Roti",
+      "Wednesday": "Ker Sangri + Missi Roti + Raita",
+      "Thursday": "Laal Maas (Veg Version) + Roti",
+      "Friday": "Panchmel Dal + Steamed Rice + Papad",
+      "Saturday": "Pyaaz Kachori + Aloo Sabzi",
+      "Sunday": "Rajasthani Thali — Dal, Baati, Churma, Raita, Pickle"
+    }
+  },
+  {
+    "id": "8",
+    "name": "Hyderabadi Biryani House",
+    "cuisineType": "Hyderabadi",
+    "pricePerTiffin": 180,
+    "isVeg": false,
+    "rating": 4.7,
+    "weeklyMenu": {
+      "Monday": "Chicken Biryani + Mirchi Ka Salan + Raita",
+      "Tuesday": "Mutton Keema + Pav + Sliced Onions",
+      "Wednesday": "Dalcha + Rice + Papad",
+      "Thursday": "Chicken 65 + Lemon Rice",
+      "Friday": "Veg Biryani + Bagara Baingan",
+      "Saturday": "Haleem + Khubz Bread",
+      "Sunday": "Special Dum Biryani + Double Ka Meetha"
+    }
+  },
+  {
+    "id": "9",
+    "name": "Kashmiri Wazwan Home",
+    "cuisineType": "Kashmiri",
+    "pricePerTiffin": 200,
+    "isVeg": false,
+    "rating": 4.6,
+    "weeklyMenu": {
+      "Monday": "Rogan Josh + Kashmiri Rice",
+      "Tuesday": "Yakhni + Steamed Rice",
+      "Wednesday": "Dum Aloo + Phulka",
+      "Thursday": "Gushtaba + Rice",
+      "Friday": "Aloo Haak + Rice + Kashmiri Kahwa",
+      "Saturday": "Tabak Maaz + Roti",
+      "Sunday": "Wazwan Spread — Multiple meat dishes + Rice + Salad"
+    }
+  },
+  {
+    "id": "10",
+    "name": "Tamil Brahmin's Tiffin",
+    "cuisineType": "Tamil",
+    "pricePerTiffin": 95,
+    "isVeg": true,
+    "rating": 4.5,
+    "weeklyMenu": {
+      "Monday": "Idli + Sambar + Thengai Chutney",
+      "Tuesday": "Ven Pongal + Gothsu",
+      "Wednesday": "Adai + Avial",
+      "Thursday": "Kuzhi Paniyaram + Sambar",
+      "Friday": "Brahmin's Puliyogare + Papad",
+      "Saturday": "Vada + Sambar + Filter Coffee",
+      "Sunday": "Puri + Potato Masala + Kesari Bath"
+    }
+  },
+  {
+    "id": "11",
+    "name": "Sindhi Swaad Kitchen",
+    "cuisineType": "Sindhi",
+    "pricePerTiffin": 125,
+    "isVeg": true,
+    "rating": 4.2,
+    "weeklyMenu": {
+      "Monday": "Sindhi Kadhi + Steamed Rice",
+      "Tuesday": "Sai Bhaji + Chapati",
+      "Wednesday": "Koki + Curd + Pickle",
+      "Thursday": "Dal Pakwan + Tamarind Chutney",
+      "Friday": "Bhuga Chawal + Raita",
+      "Saturday": "Thadri — Cold Rice Dishes with Meetha Lolo",
+      "Sunday": "Special Sindhi Thali — Kadhi, Rice, Sai Bhaji, Papad, Pickle"
+    }
+  },
+  {
+    "id": "12",
+    "name": "Odia Ghara Ranna",
+    "cuisineType": "Odia",
+    "pricePerTiffin": 105,
+    "isVeg": false,
+    "rating": 4.4,
+    "weeklyMenu": {
+      "Monday": "Machha Jhola + Steamed Rice",
+      "Tuesday": "Dalma + Rice + Papad",
+      "Wednesday": "Santula + Phulka",
+      "Thursday": "Chingudi Malai + Rice",
+      "Friday": "Besara + Rice + Pickle",
+      "Saturday": "Odia Puri Saag",
+      "Sunday": "Mahaprasad Style Thali — Rice, Dal, Saag, Khechedi, Papad"
+    }
+  }
+]
