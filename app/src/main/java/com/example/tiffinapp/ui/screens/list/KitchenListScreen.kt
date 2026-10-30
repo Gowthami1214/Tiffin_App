@@ -1,5 +1,6 @@
 package com.example.tiffinapp.ui.screens.list
 
+import android.widget.Toast
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
@@ -50,6 +51,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -70,6 +72,7 @@ fun KitchenListScreen(
     onNavigateToDetail: (Kitchen) -> Unit
 ) {
     val kitchenState by viewModel.kitchenState.collectAsState()
+    val isPaid by viewModel.isPaid.collectAsState()
 
     // Log analytics once when the screen enters the composition
     LaunchedEffect(Unit) {
@@ -123,6 +126,7 @@ fun KitchenListScreen(
                     items(items = state.kitchens, key = { it.id }) { kitchen ->
                         KitchenCard(
                             kitchen     = kitchen,
+                            isPaid      = isPaid,
                             onCardClick = { onNavigateToDetail(kitchen) },
                             onSubscribe = { viewModel.onSubscribeClicked() }
                         )
@@ -177,10 +181,13 @@ private fun SearchBarPlaceholder() {
 @Composable
 fun KitchenCard(
     kitchen: Kitchen,
+    isPaid: Boolean = false,
     onCardClick: () -> Unit,
     onSubscribe: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val context = LocalContext.current
+
     Card(
         modifier  = modifier
             .fillMaxWidth()
@@ -240,13 +247,25 @@ fun KitchenCard(
 
             // ── Subscribe CTA ────────────────────────────────────────────────
             Button(
-                onClick  = onSubscribe,
+                onClick  = {
+                    if (isPaid) {
+                        Toast.makeText(
+                            context,
+                            "Plan Active: Daily meals are scheduled from ${kitchen.name}!",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    } else {
+                        onSubscribe()
+                    }
+                },
                 modifier = Modifier.fillMaxWidth(),
-                colors   = ButtonDefaults.buttonColors(containerColor = TiffinOrange),
+                colors   = ButtonDefaults.buttonColors(
+                    containerColor = if (isPaid) VegGreen else TiffinOrange
+                ),
                 shape    = RoundedCornerShape(12.dp)
             ) {
                 Text(
-                    text  = "Subscribe",
+                    text  = if (isPaid) "Subscribed ✓" else "Subscribe",
                     style = MaterialTheme.typography.labelLarge.copy(
                         fontWeight = FontWeight.Bold
                     )

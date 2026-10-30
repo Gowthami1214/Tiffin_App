@@ -1,5 +1,6 @@
 package com.example.tiffinapp.ui.screens.detail
 
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -40,6 +41,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.tiffinapp.Analytics
@@ -62,6 +64,8 @@ fun KitchenDetailScreen(
     onBack: () -> Unit
 ) {
     val kitchen by viewModel.selectedKitchen.collectAsState()
+    val isPaid by viewModel.isPaid.collectAsState()
+    val context = LocalContext.current
 
     kitchen?.let { k ->
         // Log analytics when detail screen is displayed
@@ -105,15 +109,27 @@ fun KitchenDetailScreen(
                     color           = MaterialTheme.colorScheme.surface
                 ) {
                     Button(
-                        onClick  = { viewModel.onSubscribeClicked() },
+                        onClick  = {
+                            if (isPaid) {
+                                Toast.makeText(
+                                    context,
+                                    "Subscription Active: Daily meals are scheduled from ${k.name}!",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            } else {
+                                viewModel.onSubscribeClicked()
+                            }
+                        },
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(horizontal = 16.dp, vertical = 12.dp),
-                        colors   = ButtonDefaults.buttonColors(containerColor = TiffinOrange),
+                        colors   = ButtonDefaults.buttonColors(
+                            containerColor = if (isPaid) VegGreen else TiffinOrange
+                        ),
                         shape    = RoundedCornerShape(14.dp)
                     ) {
                         Text(
-                            text  = "🍱 Subscribe — ₹${k.pricePerTiffin} / tiffin",
+                            text  = if (isPaid) "✓ Plan Active — Daily Delivery Confirmed" else "🍱 Subscribe — ₹${k.pricePerTiffin} / tiffin",
                             style = MaterialTheme.typography.titleSmall.copy(
                                 fontWeight = FontWeight.Bold
                             )
